@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "112548838621",
+    "project_id": "wanderlust-47aa7",
+    "storage_bucket": "wanderlust-47aa7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112548838621:android:dbf5e7c712d11228b82f34",
+        "android_client_info": {
+          "package_name": "com.aditidona.wonderlust"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112548838621-1m7f1orulvc9vcq540869a7cmlth4tkh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aditidona.wonderlust",
+            "certificate_hash": "9cd4b86b239c6434e9abb7a0d47e661b36eac971"
+          }
+        },
+        {
+          "client_id": "112548838621-n306tobjqbva3gk6bgoc7qjqka92saa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6M4ZGl4qq9SdZyQkAiABjrh7eDxS99gI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112548838621-n306tobjqbva3gk6bgoc7qjqka92saa1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
