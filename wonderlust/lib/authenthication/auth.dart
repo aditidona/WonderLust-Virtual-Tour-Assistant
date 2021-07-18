@@ -125,3 +125,17 @@ Future<bool> signOutUser() async {
   await auth.signOut();
   return Future.value(true);
 }
+
+Future<bool> isAuth() async {
+  User? user = await auth.currentUser;
+  if (user != null) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Future<User?> currantUserhere() async {
+  User? user = await auth.currentUser;
+  return user;
+}

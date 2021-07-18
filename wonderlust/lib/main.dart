@@ -24,9 +24,17 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: HomPage(),
-      initialRoute: '/home',
+      /*isAuth() == true
+          ? HomePage()
+          : FutureBuilder(
+              future: currantUserhere(),
+              builder: (context, authResultSnapshot) =>
+                  authResultSnapshot.connectionState == ConnectionState.waiting
+                      ? SplashScreen()
+                      : LoginScreen()),*/
+      initialRoute: '/login',
       routes: {
-        '/home': (context) => HomePage(),
+        //'/home': (context) => HomePage(),
         '/chatbot': (context) => ChatbotPage(),
         '/trip': (context) => TripPage(),
         '/translator': (context) => TranslatorPage(),
@@ -46,11 +54,12 @@ class HomPage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
+    return FutureBuilder<User?>(
+      future: currantUserhere(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          Object? user = snapshot.data;
-          return HomePage(); //TasksPage(uid: user!.uid);
+          User? user = snapshot.data;
+          return HomePage(uid: user!.uid); //TasksPage(uid: user.uid);
         } else {
           return LoginScreen();
         }

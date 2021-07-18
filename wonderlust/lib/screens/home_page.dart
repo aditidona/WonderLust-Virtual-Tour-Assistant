@@ -4,13 +4,16 @@ import 'package:wonderlust/utilities/bottom_drawer.dart';
 import 'package:wonderlust/utilities/side_drawer.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  late String uid;
+  HomePage({Key? key, required this.uid}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageState createState() => _HomePageState(uid);
 }
 
 class _HomePageState extends State<HomePage> {
+  late String uid;
+  _HomePageState(this.uid);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Text(
-              'Hi Aditi !',
+              'Hi user !',
               style: GoogleFonts.lato(
                 textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),

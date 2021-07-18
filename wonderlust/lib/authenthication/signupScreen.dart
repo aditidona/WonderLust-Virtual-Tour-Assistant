@@ -23,7 +23,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => HomePage(),
+                builder: (context) => HomePage(uid: value.uid),
               ));
         }
       });
@@ -105,7 +105,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) =>
-                          HomePage() /*TasksPage(uid: user.uid)*/));
+                          HomePage(uid: user.uid) /*TasksPage(uid: user.uid)*/));
                 }),
                 child: Image(
                   image: AssetImage('images/logo2copy.png'),

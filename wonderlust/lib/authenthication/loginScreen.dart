@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (value != null) {
           Navigator.pushReplacement(
               context,
-              MaterialPageRoute(builder: (context) => HomePage()
+              MaterialPageRoute(builder: (context) => HomePage(uid: value.uid)
                   /* TasksPage(
                   uid: value.uid,
                 ),*/
@@ -111,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) =>
-                          HomePage() /*TasksPage(uid: user.uid)*/));
+                          HomePage(uid: user.uid) /*TasksPage(uid: user.uid)*/));
                 }),
                 child: Image(
                   image: AssetImage('images/logo2copy.png'),
